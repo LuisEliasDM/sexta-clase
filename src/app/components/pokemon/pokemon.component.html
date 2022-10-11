@@ -1,0 +1,12 @@
+<div *ngIf="pokemon$ | async as pokemon">
+    <label for="">{{pokemon.name}}</label>
+
+    <ul *ngFor="let stat of pokemon.stats">
+        <li>{{stat.stat.name}}: {{stat.base_stat}}</li>
+    </ul>
+
+    <ul *ngFor="let variety of pokemon.sprites">
+        <li>{{variety.name}}</li>
+        <li><img [src]="variety.img" alt=""></li>
+    </ul>
+</div>

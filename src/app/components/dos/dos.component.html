@@ -1,0 +1,6 @@
+<form *ngIf="infoService.data$ | async as info">
+    <label for="">Name</label>
+    <input type="text" [value]="info.name">
+    <label for="">Password</label>
+    <input type="text" [value]="info?.password">
+</form>
